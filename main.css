@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.first-section {
+  color: white;
+  background-color: #131723;
+  padding: 40px 20px;
+  text-align: center;
+}
+.first-section h1 {
+  margin-bottom: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.first-section form {
+  margin: auto;
+  width: 90vw;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 7px;
+}
+.first-section form input {
+  width: 70%;
+  border-radius: 7px 0 0 7px;
+}
+.first-section form:has(input:focus) {
+  border: 1.5px solid deepskyblue;
+  border-radius: 7px;
+}
+.first-section form button {
+  width: 30%;
+  cursor: no-drop;
+  background: #9398a3;
+  color: white;
+  border-radius: 0 7px 7px 0;
+}
+.good-btn {
+  background: deepskyblue !important;
+  cursor: pointer !important;
+}
+
+.first-section form button,
+.first-section form input {
+  padding: 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+h3 {
+  margin: 30px auto;
+  text-align: center;
+}
+section {
+  max-width: 1500px;
+  margin: auto;
+}
+section .cards-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 50px;
+  justify-content: center;
+  font-size: 20px;
+}
+section .cards-content .card,
+section .cards-content .card img {
+  width: 300px;
+  height: 300px;
+  border-radius: 7px;
+  cursor: pointer;
+  overflow: hidden;
+}
+section .cards-content .card {
+  position: relative;
+}
+section .cards-content .card div a {
+  display: block;
+  text-align: end;
+  margin-top: 25px;
+}
+section .cards-content .card div a img {
+  width: 16px;
+  height: 16px;
+}
+section .cards-content .card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 40%;
+  background: #131723af;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  transform: translateY(200px);
+  font-size: 21px;
+  transition: 0.5s linear;
+}
+section .cards-content .card.showed div {
+  transform: translateY(0%);
+}
+section .cards-content .card div span {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 52%;
+  line-height: 1em;
+  font-family: system-ui, monospace;
+}
+section button {
+  border: none;
+  background: deepskyblue;
+  padding: 10px;
+  width: 100px;
+  display: block;
+  margin: 60px auto;
+  cursor: pointer;
+  display: none;
+}
+
+section button.show {
+  display: block;
+}
+@media only screen and (max-width: 722px) and (min-width: 445px) {
+  section .cards-content .card,
+  section .cards-content .card img {
+    width: 70vw;
+    height: 70vw;
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .first-section {
+    padding: 40px 3px;
+  }
+  .first-section form {
+    width: 95vw;
+  }
+  .first-section form button,
+  .first-section form input {
+    padding: 20px 10px;
+  }
+  section .cards-content {
+    padding: 5px;
+    gap: 5px;
+  }
+  section .cards-content .card,
+  section .cards-content .card img {
+    width: 90vw;
+    height: 90vw;
+  }
+}
+footer {
+  background-color: #131723;
+  color: white;
+  font-size: 13px;
+  font-family: cursive;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  height: 65px;
+  line-height: 1.6em;
+  text-align: center;
+  padding: 10px 0;
+}
