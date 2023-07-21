@@ -27,6 +27,7 @@ submitBtn.addEventListener("click", function (e) {
 });
 // Add event listener for form submission
 form.addEventListener("submit", function (e) {
+  page = 1;
   e.preventDefault();
   showMoreBtn.classList.remove("show");
   submitBtn.classList.remove("good-btn");
@@ -34,11 +35,12 @@ form.addEventListener("submit", function (e) {
   let search = input.value;
   input.value = "";
   fetchImg(search);
-  // Add event listener for show more button click
-  showMoreBtn.addEventListener("click", function () {
+  // increase page by one when click on btn
+  showMoreBtn.onclick = function () {
     ++page;
+    console.log(page);
     fetchImg(search);
-  });
+  };
 });
 // Function to fetch images
 function fetchImg(search) {
