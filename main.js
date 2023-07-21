@@ -38,7 +38,6 @@ form.addEventListener("submit", function (e) {
   // increase page by one when click on btn
   showMoreBtn.onclick = function () {
     ++page;
-    console.log(page);
     fetchImg(search);
   };
 });
